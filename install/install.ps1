@@ -42,7 +42,7 @@ New-Item -ItemType Directory -Path $InstallDir -Force | Out-Null
 
 function Get-RequiredAsset($release, $name) {
     # Loud error on missing assets — a silent skip here ships a broken install
-    # (github.com/Rinellasky/adb-mcp/issues/2)
+    # (see github.com/Rinellasky/indesign-mcp/issues)
     $asset = $release.assets | Where-Object { $_.name -eq $name }
     if (-not $asset) {
         throw ("Release $($release.tag_name) is missing required asset '$name'. " +
