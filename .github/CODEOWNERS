@@ -1,0 +1,19 @@
+# Onsite.ai-OS — Code-Owner nach den OS-Rollen (Maintainer · Junior-Maintainer · User)
+# Wirkt mit dem Org-Ruleset „R1 PR-Pflicht" (Code-Owner-Review). Es gilt der letzte Treffer.
+# Maintainer: os-maintainer · Junior-Maintainer: os-junior-maintainer · User bauen, mergen nie.
+
+# Alles: Review durch den Maintainer
+*                          @onsite-ai-devs/os-maintainer
+
+# Docs (Fachwissen, Queues, Inhalte der Sammel-PRs): Review auch durch den Junior-Maintainer
+**/Fachwissen/             @onsite-ai-devs/os-maintainer @onsite-ai-devs/os-junior-maintainer
+**/Kandidaten-Queue/       @onsite-ai-devs/os-maintainer @onsite-ai-devs/os-junior-maintainer
+**/sitzungswissen/         @onsite-ai-devs/os-maintainer @onsite-ai-devs/os-junior-maintainer
+**/Debugging*findings/     @onsite-ai-devs/os-maintainer @onsite-ai-devs/os-junior-maintainer
+**/Queue-Protokolle/       @onsite-ai-devs/os-maintainer @onsite-ai-devs/os-junior-maintainer
+
+# Normativ, trotz Fachwissen-Ordner: Prozess-Workflows nur Maintainer
+**/Fachwissen/Workflows/   @onsite-ai-devs/os-maintainer
+
+# Die Regel selbst: nur Maintainer
+/.github/CODEOWNERS        @onsite-ai-devs/os-maintainer
